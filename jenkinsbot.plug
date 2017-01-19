@@ -1,0 +1,10 @@
+[Core]
+Name = JenkinsBot
+Module = jenkinsbot
+
+[Python]
+Version = 3
+
+[Documentation]
+Description = JenkinsBot is an Err plugin to manage Jenkins CI jobs from your chat platform.
+
