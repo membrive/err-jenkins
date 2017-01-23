@@ -48,7 +48,7 @@ class JenkinsBot(BotPlugin):
     def jenkins_list(self, msg, args):
         """List Jenkins jobs. You can filter with strings."""
 
-        self.send(msg.frm, "I'm getting the jobs list from Jenkins...")
+        self.send(msg.to, "I'm getting the jobs list from Jenkins...")
 
         search_term = args.strip().lower()
         jobs = [job for job in self.jenkins.get_jobs()
@@ -83,7 +83,7 @@ class JenkinsBot(BotPlugin):
     def jenkins_running(self, msg, args):
         """List running jobs."""
 
-        self.send(msg.frm, "I will ask for the current running builds list!")
+        self.send(msg.to, "I will ask for the current running builds list!")
 
         jobs = self.jenkins.get_running_builds()
 
@@ -111,7 +111,7 @@ class JenkinsBot(BotPlugin):
     def jenkins_queue(self, msg, args):
         """List jobs in queue."""
 
-        self.send(msg.frm, "Getting the job queue...")
+        self.send(msg.to, "Getting the job queue...")
 
         jobs = self.jenkins.get_queue_info()
 
